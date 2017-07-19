@@ -34,3 +34,21 @@
     return _coutDownView;
 }
 ```
+
++ 3.如果你需要在开始和结束的时候做一些特殊的操作，当然也没问题。我这里还提供了一个方法供你选择。
+```
++ (ZHNCountDownView *)ZHN_countDownWithStartTitle:(NSString *)startTitle
+                                    reloadTitle:(NSString *)reloadTitle
+                              countingFormatter:(NSString *)fromatter
+                                   Timeinterval:(int)time
+                                        handler:(ZHNCountDownHandleBlock)handle
+                           countDownStartAction:(ZHNCountDownStartBlock)coutDownStartAction
+                             countdownEndAction:(ZHNCountDownEndBlock)countDownEndAction;
+```
+
++ 4.如果你还有一些字体大小等等的需求，这里也提供了一些参数供你修改。
+
+##### have fun ~
+
+
+
