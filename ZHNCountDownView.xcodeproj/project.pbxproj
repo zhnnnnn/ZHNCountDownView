@@ -15,6 +15,8 @@
 		CDAB37A01F1EF45000070B50 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDAB379E1F1EF45000070B50 /* LaunchScreen.storyboard */; };
 		CDAB37AB1F1EF45000070B50 /* ZHNCountDownViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CDAB37AA1F1EF45000070B50 /* ZHNCountDownViewTests.m */; };
 		CDAB37B61F1EF45000070B50 /* ZHNCountDownViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CDAB37B51F1EF45000070B50 /* ZHNCountDownViewUITests.m */; };
+		CDAB37C51F1EF46600070B50 /* ZHNCountDownView.m in Sources */ = {isa = PBXBuildFile; fileRef = CDAB37C41F1EF46600070B50 /* ZHNCountDownView.m */; };
+		CDAB37C91F1EF49B00070B50 /* ZHNTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = CDAB37C81F1EF49B00070B50 /* ZHNTimer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,10 @@
 		CDAB37B11F1EF45000070B50 /* ZHNCountDownViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZHNCountDownViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDAB37B51F1EF45000070B50 /* ZHNCountDownViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZHNCountDownViewUITests.m; sourceTree = "<group>"; };
 		CDAB37B71F1EF45000070B50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDAB37C31F1EF46600070B50 /* ZHNCountDownView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ZHNCountDownView.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		CDAB37C41F1EF46600070B50 /* ZHNCountDownView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ZHNCountDownView.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		CDAB37C71F1EF49B00070B50 /* ZHNTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHNTimer.h; sourceTree = "<group>"; };
+		CDAB37C81F1EF49B00070B50 /* ZHNTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHNTimer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,10 +87,10 @@
 		CDAB37841F1EF45000070B50 = {
 			isa = PBXGroup;
 			children = (
+				CDAB378E1F1EF45000070B50 /* Products */,
 				CDAB378F1F1EF45000070B50 /* ZHNCountDownView */,
 				CDAB37A91F1EF45000070B50 /* ZHNCountDownViewTests */,
 				CDAB37B41F1EF45000070B50 /* ZHNCountDownViewUITests */,
-				CDAB378E1F1EF45000070B50 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,15 +107,16 @@
 		CDAB378F1F1EF45000070B50 /* ZHNCountDownView */ = {
 			isa = PBXGroup;
 			children = (
+				CDAB37C61F1EF46E00070B50 /* DTCountDownView */,
+				CDAB37901F1EF45000070B50 /* Supporting Files */,
 				CDAB37931F1EF45000070B50 /* AppDelegate.h */,
 				CDAB37941F1EF45000070B50 /* AppDelegate.m */,
+				CDAB379C1F1EF45000070B50 /* Assets.xcassets */,
+				CDAB37A11F1EF45000070B50 /* Info.plist */,
+				CDAB379E1F1EF45000070B50 /* LaunchScreen.storyboard */,
+				CDAB37991F1EF45000070B50 /* Main.storyboard */,
 				CDAB37961F1EF45000070B50 /* ViewController.h */,
 				CDAB37971F1EF45000070B50 /* ViewController.m */,
-				CDAB37991F1EF45000070B50 /* Main.storyboard */,
-				CDAB379C1F1EF45000070B50 /* Assets.xcassets */,
-				CDAB379E1F1EF45000070B50 /* LaunchScreen.storyboard */,
-				CDAB37A11F1EF45000070B50 /* Info.plist */,
-				CDAB37901F1EF45000070B50 /* Supporting Files */,
 			);
 			path = ZHNCountDownView;
 			sourceTree = "<group>";
@@ -120,13 +127,14 @@
 				CDAB37911F1EF45000070B50 /* main.m */,
 			);
 			name = "Supporting Files";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		CDAB37A91F1EF45000070B50 /* ZHNCountDownViewTests */ = {
 			isa = PBXGroup;
 			children = (
-				CDAB37AA1F1EF45000070B50 /* ZHNCountDownViewTests.m */,
 				CDAB37AC1F1EF45000070B50 /* Info.plist */,
+				CDAB37AA1F1EF45000070B50 /* ZHNCountDownViewTests.m */,
 			);
 			path = ZHNCountDownViewTests;
 			sourceTree = "<group>";
@@ -134,10 +142,22 @@
 		CDAB37B41F1EF45000070B50 /* ZHNCountDownViewUITests */ = {
 			isa = PBXGroup;
 			children = (
-				CDAB37B51F1EF45000070B50 /* ZHNCountDownViewUITests.m */,
 				CDAB37B71F1EF45000070B50 /* Info.plist */,
+				CDAB37B51F1EF45000070B50 /* ZHNCountDownViewUITests.m */,
 			);
 			path = ZHNCountDownViewUITests;
+			sourceTree = "<group>";
+		};
+		CDAB37C61F1EF46E00070B50 /* DTCountDownView */ = {
+			isa = PBXGroup;
+			children = (
+				CDAB37C31F1EF46600070B50 /* ZHNCountDownView.h */,
+				CDAB37C41F1EF46600070B50 /* ZHNCountDownView.m */,
+				CDAB37C71F1EF49B00070B50 /* ZHNTimer.h */,
+				CDAB37C81F1EF49B00070B50 /* ZHNTimer.m */,
+			);
+			name = DTCountDownView;
+			path = DTCountDownView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,7 +293,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDAB37C51F1EF46600070B50 /* ZHNCountDownView.m in Sources */,
 				CDAB37981F1EF45000070B50 /* ViewController.m in Sources */,
+				CDAB37C91F1EF49B00070B50 /* ZHNTimer.m in Sources */,
 				CDAB37951F1EF45000070B50 /* AppDelegate.m in Sources */,
 				CDAB37921F1EF45000070B50 /* main.m in Sources */,
 			);
@@ -317,6 +339,7 @@
 				CDAB379A1F1EF45000070B50 /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		CDAB379E1F1EF45000070B50 /* LaunchScreen.storyboard */ = {
@@ -325,6 +348,7 @@
 				CDAB379F1F1EF45000070B50 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
